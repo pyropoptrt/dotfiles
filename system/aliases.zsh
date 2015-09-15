@@ -8,3 +8,7 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+# other aliases
+alias reload!='. ~/.zshrc' #reload our zshrc file
+alias home='cd ~' #drop us back into the user home folder

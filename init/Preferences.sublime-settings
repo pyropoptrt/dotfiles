@@ -1,0 +1,61 @@
+{
+	"auto_complete": true,
+	"auto_complete_with_fields": true,
+	"bold_folder_labels": true,
+	"bold_folder_levels": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme.tmTheme",
+	"default_encoding": "UTF-8",
+	"default_line_ending": "unix",
+	"detect_indentation": true,
+	"detect_slow_plugins": false,
+	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
+	"fallback_encoding": "UTF-8",
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		"*.psd",
+		".vagrant"
+	],
+	"folder_exclude_patterns":
+	[
+		".sass-cache",
+		".git",
+		".bundle"
+	],
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 16,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Markdown",
+		"Vintage"
+	],
+	"line_padding_bottom": 2,
+	"line_padding_top": 2,
+	"new_file_syntax": "PHP",
+	"overlay_scroll_bars": "enabled",
+	"preview_on_click": false,
+	"rulers":
+	[
+		100
+	],
+	"shift_tab_unindent": true,
+	"soda_classic_tabs": true,
+	"soda_folder_icons": true,
+	"spellCheck": true,
+	"tab_size": 4,
+	"theme": "Material-Theme.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_tab_stops": true,
+	"word_separators": "./\\()\"'-:,.;<>~!@#%^&*|+=[]{}`~?",
+	"word_wrap": true,
+	"wrap_width": 100
+}

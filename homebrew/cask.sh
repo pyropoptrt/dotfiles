@@ -46,6 +46,7 @@ brew cask install adium                 # My preferred chat client
 # browsers
 brew cask install google-chrome-canary
 brew cask install firefox-nightly
+brew cask install firefox
 brew cask install webkit-nightly
 brew cask install chromium
 brew cask install torbrowser

@@ -105,6 +105,10 @@ brew install mysql
 brew install nmap
 brew install mackup
 
+# some stuff for playing blu-rays with vlc
+brew install libbluray
+brew install libaacs
+
 # Remove outdated versions from the cellar
 brew cleanup
 

@@ -61,3 +61,4 @@ brew cask install gpgtools
 brew cask install evernote
 brew cask install mou
 brew cask install sdformatter
+brwe cask install blu-ray-player          #mac blu-ray player

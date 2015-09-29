@@ -49,7 +49,6 @@ brew install bash
 # regular bash-completion package is held back to an older release, so we get latest from versions.
 #   github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
 brew tap homebrew/versions
-brew install bash-completion2
 
 # Install wget with IRI support
 brew install wget --enable-iri

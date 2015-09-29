@@ -104,6 +104,7 @@ brew install zsh
 brew install mysql
 brew install nmap
 brew install mackup
+brew install dnsmasq
 
 # some stuff for playing blu-rays with vlc
 brew install libbluray

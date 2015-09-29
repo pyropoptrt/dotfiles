@@ -103,7 +103,16 @@ brew install zsh
 brew install mysql
 brew install nmap
 brew install mackup
+
+# install dnsmasq and do some set up to allow .dev domains locally
 brew install dnsmasq
+cd $(brew --prefix)
+  mkdir etc
+  echo 'address=/.dev/127.0.0.1' > etc/dnsmasq.conf
+  sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
+  sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+  sudo mkdir /etc/resolver
+  sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
 
 # some stuff for playing blu-rays with vlc
 brew install libbluray

@@ -35,6 +35,7 @@ brew cask install virtualbox-extension-pack
 brew cask install heroku-toolbelt
 brew cask install vagrant
 brew cask install github-desktop
+brew cask install dockertoolbox
 
 # fun
 brew cask install limechat              # irc client

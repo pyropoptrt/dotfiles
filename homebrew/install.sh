@@ -103,6 +103,7 @@ brew install zsh
 brew install mysql
 brew install nmap
 brew install mackup
+brew install sshuttle # neat little utility for vpn via ssh
 
 # install dnsmasq and do some set up to allow .dev domains locally
 brew install dnsmasq

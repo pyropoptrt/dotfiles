@@ -2,11 +2,12 @@
 
 # Install native apps
 # make sure that brew cask is installed first
-brew install caskroom/cask/brew-cask
-brew tap caskroom/versions
+# brew install caskroom/cask/brew-cask
+# brew tap caskroom/versions
 
 # to maintain cask ....
-brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+# brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
+brew update && brew cleanup && brew cask cleanup
 
 # daily
 brew cask install spectacle

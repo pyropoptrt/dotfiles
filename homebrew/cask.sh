@@ -24,7 +24,7 @@ brew cask install quicksilver           # Quicksilver > Alfred (imho)
 
 # dev
 brew cask install sublime-text3
-# brew cask install atom
+brew cask install atom
 brew cask install imagealpha
 brew cask install imageoptim
 brew cask install sequel-pro            # MySQL GUI. Pure Awesomeness.

@@ -21,6 +21,7 @@ brew cask install growl-fork
 brew cask install growlnotify
 brew cask install growlvoice
 brew cask install quicksilver           # Quicksilver > Alfred (imho)
+brew cask install iterm2                # giving this another try
 
 # dev
 brew cask install sublime-text3

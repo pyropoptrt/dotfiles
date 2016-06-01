@@ -36,6 +36,9 @@ brew cask install heroku-toolbelt
 brew cask install vagrant
 brew cask install github-desktop
 brew cask install dockertoolbox
+brew cask install integrity             # Website link checker software
+brew cask install scrutiny              # Some basic SEO software
+
 
 # fun
 brew cask install limechat              # irc client

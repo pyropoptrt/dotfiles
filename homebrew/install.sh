@@ -59,6 +59,9 @@ brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
 brew install homebrew/php/php56 --with-gmp
 
+# Handy utility for php debugging
+brew install php56-xdebug
+
 
 
 # run this script when this file changes guy.

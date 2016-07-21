@@ -24,7 +24,8 @@ brew cask install quicksilver           # Quicksilver > Alfred (imho)
 brew cask install iterm2                # giving this another try
 
 # dev
-brew cask install sublime-text3
+# brew cask install sublime-text3       # Apparently this has been renamed
+brew cask install sublime-text
 brew cask install atom
 brew cask install imagealpha
 brew cask install imageoptim

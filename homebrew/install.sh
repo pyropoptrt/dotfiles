@@ -95,6 +95,7 @@ brew install lynx
 #brew install pv
 #brew install rename
 #brew install rhino
+brew install rbenv
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree

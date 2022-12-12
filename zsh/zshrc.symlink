@@ -44,3 +44,31 @@ function certs_expiry {
 }
 
 alias nmap_ssl="$(which nmap) -sV -sC --script ssl-cert"
+# Convert p7b keychains to the PEM format
+function pem {
+	local newfile="${@:r}-full.pem"
+	local oldfile="${@}"
+
+	# prompt for our server name so we can automatically upload our file
+	echo "Servername: "
+	read servername
+
+	# old commands. saved for prosperity for future troubleshooting
+	# openssl pkcs7 -inform PEM -in $@ -outform PEM -out ${@:r}-full.pem -print_certs
+	# rm -rf $@
+
+	# convert our file from p7b to pem
+	openssl pkcs7 -inform PEM -in ${oldfile} -outform PEM -out ${newfile} -print_certs
+
+	# delete our old cert file
+	rm -rf ${oldfile}
+
+	# upload our new cert file
+	scp -rpC ${newfile} ${servername}:~
+
+	# Delete our newly created cert
+	rm -rf ${newfile}
+
+	# echo created new cert and uploaded
+	echo "Created ${newfile} and uploaded to ${servername}"
+}

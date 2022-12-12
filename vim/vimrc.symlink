@@ -1,4 +1,41 @@
-syntax on
+" syntax on
+syntax enable
+
+" Always show our line numbers
+set number
+
+" Color scheme
+colorscheme desert
+
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+
+" Set our backspace
+set backspace=indent,eol,start
+
+
+" Tab spacing
+set softtabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" Custom tab spacing for certain file types
+autocmd Filetype php setlocal tabstop=4 " tab spacing for php
+autocmd Filetype yml setlocal tabstop=2 " tab spacing for yml
+autocmd Filetype yaml setlocal tabstop=2 " tab spacing for yaml
+
+
+" Configuration for our status line
+set laststatus=2 " 
+set statusline+=%r " Show if the file is read only
+set statusline+=%F " Show the full file path
+set statusline+=%=[ 
+set statusline+=%=%l " Show our current line position
+set statusline+=%=/
+set statusline+=%=%L " Show total line count
+set statusline+=%=]
+
+
+" Syntax Highlighting

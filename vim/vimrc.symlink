@@ -39,3 +39,7 @@ set statusline+=%=]
 
 
 " Syntax Highlighting
+" Turned off until I can move my syntax files
+" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+" autocmd BufNewFile,BufRead /etc/php/*/fpm/*.conf set syntax=dosini
+" autocmd BufNewFile,BufRead /etc/php/*/fpm/pool.d/*.conf set syntax=dosini

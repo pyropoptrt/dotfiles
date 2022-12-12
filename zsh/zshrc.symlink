@@ -39,6 +39,9 @@ do
 done
 
 unset config_files
+
+export PATH=~/.composer/vendor/bin:$PATH;
+
 function certs_expiry {
 	echo | openssl s_client -servername $@ -connect $@:443 2>/dev/null | openssl x509 -noout -issuer -subject -dates;
 }

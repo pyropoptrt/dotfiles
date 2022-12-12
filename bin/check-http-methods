@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# This script will check available http methods against a site on port 80 and port 443
+for httpMethod in GET POST PUT TRACE CONNECT OPTIONS DELETE PATCH OPTIONS PROPFIND;
+do
+	echo "--- HTTP Method :: ${httpMethod} ---";
+
+	printf "${httpMethod}:80 ";
+	printf "${httpMethod} / HTTP/1.1\nHost: $1\n\n" | nc -w 5 $1 80 | grep "HTTP/1.1";
+
+	sleep 3;
+
+	printf "${httpMethod}:443 ";
+	printf "${httpMethod} / HTTP/1.1\nHost: $1\n\n" | nc -w 5 $1 443 | grep "HTTP/1.1";
+
+	printf "\n\n";
+
+	sleep 5;
+done

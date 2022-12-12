@@ -7,8 +7,10 @@ then
   alias l="gls -lAhp --color"
   alias ll="gls -lhp --color"
   alias la='gls -lAhp --color'
+  alias ltr="gls -ltr --color"
 fi
 
 # other aliases
 alias reload!='. ~/.zshrc' #reload our zshrc file
 alias home='cd ~' #drop us back into the user home folder
+alias down='cd ~/Downloads' # drop us in our downloads folder

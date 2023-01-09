@@ -18,6 +18,11 @@ alias quick="killall Quicksilver >> /dev/null; open /Applications/QuickSilver.ap
 # alias coreaudio="sudo launchctl kickstart -kp system/com.apple.audio.coreaudio; sudo killall 'AU Lab' >> /dev/null; open ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Dropbox\ Files/Car\ Audio/Headphones/Fostex\ T40RP\ mk3\ new.trak"
 alias coreaudio="sudo launchctl kickstart -kp system/com.apple.audio.coreaudio; sudo killall 'AU Lab' >> /dev/null;"
 
+
+# Shortcut for Sublime Text
+alias st="$(which subl)"
+
+
 # Quick folder navigation
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"

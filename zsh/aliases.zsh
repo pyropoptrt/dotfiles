@@ -34,3 +34,9 @@ alias epic="~/Desktop/Epic/files"
 alias dnsmasq="vim ~/.config/valet/dnsmasq.d/tld-test.conf && sudo brew services restart dnsmasq"
 
 
+#   Ansible
+alias ans="cd ~/Documents/ansible"
+alias ap="ansible-playbook -K"
+alias dist="ap ubuntu-dist-upgrade.yaml"
+alias yum="ap centos-ossec_aide-udpate.yaml"
+

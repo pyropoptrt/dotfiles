@@ -29,3 +29,8 @@ alias down="cd ~/Downloads"
 alias notes="st ~/Dropbox/Unix\ Notes.txt"
 alias epic="~/Desktop/Epic/files"
 
+
+# quick dnsmasq configuration editor
+alias dnsmasq="vim ~/.config/valet/dnsmasq.d/tld-test.conf && sudo brew services restart dnsmasq"
+
+

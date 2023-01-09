@@ -6,66 +6,60 @@
 # brew tap caskroom/versions
 
 # to maintain cask ....
-# brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup
-brew update && brew cleanup && brew cask cleanup
+brew update && brew upgrade && brew cleanup && brew cask cleanup --cask
+
 
 # daily
-brew cask install spectacle
-brew cask install dropbox
-brew cask install onepassword
-#brew cask install rescuetime
-brew cask install flux
-brew cask install spotify
-brew cask install transmit
-brew cask install growl-fork
-brew cask install growlnotify
-brew cask install growlvoice
-brew cask install quicksilver           # Quicksilver > Alfred (imho)
-brew cask install iterm2                # giving this another try
+brew install --cask spectacle             # handy utility for moving/resizing windows
+brew install --cask dropbox
+brew install --cask lastpass			  # passwords and such
+brew install --cask spotify				  # gotta have my tunes
+brew install --cask transmit			  # awesome sftp client
+brew install --cask quicksilver           # Quicksilver > Alfred (imho)
+brew install --cask iterm2                # much better than Apple's terminal
+brew install --cask slack
+brew install --cask discord               # all the cool kids are on this nowadays 
+brew install --cask tweeten               # nice replacement for tweetdeck. RIP.
+
 
 # dev
-# brew cask install sublime-text3       # Apparently this has been renamed
-brew cask install sublime-text
-brew cask install atom
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install sequel-pro            # MySQL GUI. Pure Awesomeness.
-brew cask install livereload
-brew cask install virtualbox
-brew cask install virtualbox-extension-pack
-brew cask install heroku-toolbelt
-brew cask install vagrant
-brew cask install github-desktop
-brew cask install dockertoolbox
-brew cask install integrity             # Website link checker software
-brew cask install scrutiny              # Some basic SEO software
+brew install --cask sublime-text          # my editor of choice
+brew install --cask atom
+brew install --cask sequel-ace            # MySQL GUI. Pure Awesomeness. Updated from PRO to support MySQL 8
+
+brew install --cask virtualbox
+brew install --cask virtualbox-extension-pack
+brew install --cask heroku-toolbelt
+brew install --cask vagrant
+brew install --cask github-desktop
+brew install --cask dockertoolbox
+
+brew install --cask imagealpha
+brew install --cask imageoptim
+
+brew install --cask integrity             # Website link checker software
+brew install --cask scrutiny              # Some basic SEO software
 
 
 # fun
-brew cask install limechat              # irc client
-brew cask install miro-video-converter
-brew cask install horndis               # usb tethering
-brew cask install caffeine              # keeps laptop from going into sleep mode
-brew cask install gitter
-brew cask install slack
-brew cask install adium                 # My preferred chat client
+brew install --cask horndis               # usb tethering
+brew install --cask caffeine              # keeps laptop from going into sleep mode
+
 
 # browsers
-brew cask install google-chrome-canary
-brew cask install firefox-nightly
-brew cask install firefox
-brew cask install webkit-nightly
-brew cask install chromium
-brew cask install torbrowser
+# mostly disabled since I'm not browser testing nowadays
+brew install --cask firefox
+brew install brave-browser --cask
+# brew install --cask google-chrome-canary
+# brew install --cask firefox-nightly
+# brew install --cask webkit-nightly
+# brew install --cask chromium
+# brew install --cask torbrowser
+
 
 # less often
-brew cask install disk-inventory-x
-# brew cask install screenflow4           # 4 specifically not 5.
-brew cask install vlc
-brew cask install gpgtools
-#brew cask install licecap
-#brew cask install utorrent
-brew cask install evernote
-brew cask install mou
-brew cask install sdformatter
-brew cask install unrarx
+brew install --cask disk-inventory-x
+brew install --cask vlc
+brew install --cask gpgtools
+brew install --cask sdformatter
+brew install --cask unrarx

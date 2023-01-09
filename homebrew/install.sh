@@ -57,10 +57,10 @@ brew install wget --enable-iri
 brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
+# brew install homebrew/php/php56 --with-gmp
 
-# Handy utility for php debugging
-brew install php56-xdebug
+# # Handy utility for php debugging
+# brew install php56-xdebug
 
 
 
@@ -74,33 +74,24 @@ brew install gh
 # mtr - ping & traceroute. best.
 brew install mtr
 
-    # allow mtr to run without sudo
-    mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
-    sudo chmod 4755 $mtrlocation/sbin/mtr
-    sudo chown root $mtrlocation/sbin/mtr
+# allow mtr to run without sudo
+mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
+sudo chmod 4755 $mtrlocation/sbin/mtr
+sudo chown root $mtrlocation/sbin/mtr
 
 
 # Install other useful binaries
 brew install ack
-#brew install dark-mode
-#brew install exiv2
 brew install git
-#brew install git-lfs
+brew install git-lfs
 brew install imagemagick --with-webp
 brew install lua
 brew install node # This installs `npm` too using the recommended installation method
 brew install lynx
-#brew install p7zip
-#brew install pigz
-#brew install pv
-#brew install rename
-#brew install rhino
 brew install rbenv
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
-#brew install webkit2png
-#brew install zopfli
 brew install ffmpeg --with-libvpx
 brew install terminal-notifier
 brew install zsh
@@ -112,13 +103,13 @@ brew install ansible # Been using this and SaltStack hand-in-hand
 
 # install dnsmasq and do some set up to allow .dev domains locally
 brew install dnsmasq
-cd $(brew --prefix)
-  mkdir etc
-  echo 'address=/.dev/127.0.0.1' > etc/dnsmasq.conf
-  sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
-  sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
-  sudo mkdir /etc/resolver
-  sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/dev'
+# cd $(brew --prefix)
+#   mkdir etc
+#   echo 'address=/.test/127.0.0.1' > etc/dnsmasq.conf
+#   sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons
+#   sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist
+#   sudo mkdir /etc/resolver
+#   sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/test'
 
 # some stuff for playing blu-rays with vlc
 brew install libbluray

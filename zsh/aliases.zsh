@@ -40,3 +40,22 @@ alias ap="ansible-playbook -K"
 alias dist="ap ubuntu-dist-upgrade.yaml"
 alias yum="ap centos-ossec_aide-udpate.yaml"
 
+
+#   Epic
+# queries Epic servers for user groups
+function egroups {
+	currentPath=$(pwd);
+
+	ans; 
+	ansible epic-linux -K -m shell -a "groups ${1}"; 
+	cd ${currentPath};
+}
+
+# retrieve the gecos for a user
+function sssctl {
+	currentPath=$(pwd);
+
+	ans; 
+	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
+	cd ${currentPath};
+}

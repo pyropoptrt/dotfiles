@@ -114,6 +114,10 @@ brew install dnsmasq
 # some stuff for playing blu-rays with vlc
 brew install libbluray
 brew install libaacs
+ 
+# handy utils for output formatting
+brew instal jq # json formatting
+brew instal htmlq # html formatting
 
 # Remove outdated versions from the cellar
 brew cleanup

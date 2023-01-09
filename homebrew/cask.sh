@@ -10,9 +10,12 @@ brew update && brew upgrade && brew cleanup && brew cask cleanup --cask
 
 
 # daily
+brew install --cask iris                  # saves your eyes. Seriously.
 brew install --cask spectacle             # handy utility for moving/resizing windows
 brew install --cask dropbox
 brew install --cask lastpass			  # passwords and such
+brew install --cask soundflower           # for capturing audio output
+brew install --cask au-lab                # I use this for global eq
 brew install --cask spotify				  # gotta have my tunes
 brew install --cask transmit			  # awesome sftp client
 brew install --cask quicksilver           # Quicksilver > Alfred (imho)
@@ -34,6 +37,7 @@ brew install --cask vagrant
 brew install --cask github-desktop
 brew install --cask dockertoolbox
 
+# image compression utilities
 brew install --cask imagealpha
 brew install --cask imageoptim
 
@@ -49,7 +53,7 @@ brew install --cask caffeine              # keeps laptop from going into sleep m
 # browsers
 # mostly disabled since I'm not browser testing nowadays
 brew install --cask firefox
-brew install brave-browser --cask
+brew install --cask brave-browser
 # brew install --cask google-chrome-canary
 # brew install --cask firefox-nightly
 # brew install --cask webkit-nightly
@@ -58,8 +62,10 @@ brew install brave-browser --cask
 
 
 # less often
-brew install --cask disk-inventory-x
 brew install --cask vlc
 brew install --cask gpgtools
 brew install --cask sdformatter
 brew install --cask unrarx
+brew install --cask insomnia            # I prefer this over postman
+brew install --cask wireshark           # all teh packets are belong to me™
+brew install --cask xld                 # for the occasional file conversion

@@ -42,43 +42,10 @@ unset config_files
 
 export PATH=~/.composer/vendor/bin:$PATH;
 
-function certs_expiry {
-	echo | openssl s_client -servername $@ -connect $@:443 2>/dev/null | openssl x509 -noout -issuer -subject -dates;
-}
 
-alias nmap_ssl="$(which nmap) -sV -sC --script ssl-cert"
-# Convert p7b keychains to the PEM format
-function pem {
-	local newfile="${@:r}-full.pem"
-	local crtfile="${newfile:t:r}.crt"
-	local oldfile="${@}"
 
-	# prompt for our server name so we can automatically upload our file
-	echo "Servername: "
-	read servername
 
-	# old commands. saved for prosperity for future troubleshooting
-	# openssl pkcs7 -inform PEM -in $@ -outform PEM -out ${@:r}-full.pem -print_certs
-	# rm -rf $@
 
-	# convert our file from p7b to pem
-	openssl pkcs7 -inform PEM -in ${oldfile} -outform PEM -out ${newfile} -print_certs
 
-	# convert our file from pem to crt
-	openssl x509 -inform PEM -in ${newfile}	-out ${crtfile}
 
-	# delete our old cert file
-	rm -rf ${oldfile}
 
-	# upload our new cert files
-	scp -rpC ${newfile} ${servername}:~
-	scp -rpC ${crtfile} ${servername}:~
-
-	# Delete our newly created cert
-	rm -rf ${newfile}
-	rm -rf ${crtfile}
-
-	# echo created new cert and uploaded
-	# echo "Created ${newfile} and uploaded to ${servername}"
-	echo "${newfile} and ${crtfile} have been uploaded to ${servername}"
-}

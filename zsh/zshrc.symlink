@@ -48,4 +48,7 @@ export PATH=~/.composer/vendor/bin:$PATH;
 
 
 
+# launch sublime
+echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"'
 
+alias st="$(which subl)"

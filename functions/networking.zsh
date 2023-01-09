@@ -20,6 +20,7 @@ function response {
 	curl_format='{
 		"connect": %{time_connect},
 		"start transfer": %{time_starttransfer},
+		--------------------------------------------------
 		"total time": %{time_total}
 	}';
 
@@ -46,6 +47,7 @@ function timing {
 	 "time_pretransfer": %{time_pretransfer},
 	 "time_redirect": %{time_redirect},
 	 "time_starttransfer": %{time_starttransfer},
+	  --------------------------------------------------
 	 "time_total": %{time_total}
 	}';
 

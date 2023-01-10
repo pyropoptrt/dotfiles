@@ -6,12 +6,12 @@
 # update nmap script database
 alias nmap_update="sudo nmap --script-updatedb";
 
-alias nmap_fast="nmap -F -T --version-light --top-ports 300 -sV -Pn";
+alias nmap_fast="nmap -F -T5 --version-light --top-ports 300 -sV -Pn";
 alias nmap_full="sudo nmap -sS -T4 -PE -PP -PS80,443 -PY -g 53 -A -p1-65535 -v -Pn";
 
 # my shortcuts for the above commands
-alias nf="{nmap_fast}";
-alias nff="{nmap_full}";
+alias nf="${nmap_fast}";
+alias nff="${nmap_full}";
 
 # use nmap to get a MAC address
 alias nmap_mac="sudo nmap -sP -Pn";

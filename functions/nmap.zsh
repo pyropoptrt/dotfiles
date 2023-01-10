@@ -10,8 +10,8 @@ alias nmap_fast="nmap -F -T5 --version-light --top-ports 300 -sV -Pn";
 alias nmap_full="sudo nmap -sS -T4 -PE -PP -PS80,443 -PY -g 53 -A -p1-65535 -v -Pn";
 
 # my shortcuts for the above commands
-alias nf="${nmap_fast}";
-alias nff="${nmap_full}";
+alias nf="nmap_fast";
+alias nff="nmap_full";
 
 # use nmap to get a MAC address
 alias nmap_mac="sudo nmap -sP -Pn";
@@ -21,7 +21,7 @@ alias nmap_ssl_check="nmap -sV --script ssl-enum-ciphers -p 443";
 
 # run our nmap vulnerability script
 alias nmap_vuln="nmap -sV -Pn --script vulners";
-alias vuln="${nmap_vuln}";
+alias vuln="nmap_vuln";
 
 # get http methods via nmap
 alias options="nmap -p 80,443,8080,8443,8008,9080,9443 --script http-methods";

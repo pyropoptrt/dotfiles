@@ -5,6 +5,9 @@
 # just get header
 alias header="curl -iL -sD - -o /dev/null";
 
+# shortcut for nslookup
+alias ns="nslookup";
+
 
 # FUNCTIONS
 

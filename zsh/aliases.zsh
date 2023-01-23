@@ -16,7 +16,8 @@ alias quick="killall Quicksilver >> /dev/null; open /Applications/QuickSilver.ap
 
 # Fix for when CoreAudio crashes
 # alias coreaudio="sudo launchctl kickstart -kp system/com.apple.audio.coreaudio; sudo killall 'AU Lab' >> /dev/null; open ~/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/Dropbox\ Files/Car\ Audio/Headphones/Fostex\ T40RP\ mk3\ new.trak"
-alias coreaudio="sudo launchctl kickstart -kp system/com.apple.audio.coreaudio; sudo killall 'AU Lab' >> /dev/null;"
+#alias coreaudio="sudo launchctl kickstart -kp system/com.apple.audio.coreaudio; sudo killall 'AU Lab' >> /dev/null;"
+alias coreaudio="sudo pkill coreaudiod; sudo killall 'AU Lab' >> /dev/null;"
 
 
 # Shortcut for Sublime Text

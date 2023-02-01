@@ -42,6 +42,9 @@ alias dist="ap ubuntu-dist-upgrade.yaml"
 alias yum="ap centos-ossec_aide-udpate.yaml"
 
 
+# powershell
+alias powershell="pwsh"
+
 #   Epic
 # queries Epic servers for user groups
 function egroups {

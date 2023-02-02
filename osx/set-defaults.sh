@@ -6,8 +6,8 @@
 #
 # Run ./set-defaults.sh and you'll be good to go.
 
-# Disable transparency in the menu bar and elsewhere on Yosemite
-defaults write com.apple.universalaccess reduceTransparency -bool true
+# # Disable transparency in the menu bar and elsewhere on Yosemite
+# defaults write com.apple.universalaccess reduceTransparency -bool true
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"

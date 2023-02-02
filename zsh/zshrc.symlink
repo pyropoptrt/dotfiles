@@ -53,4 +53,3 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"'
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
 
-alias st="$(which subl)"

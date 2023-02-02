@@ -2,8 +2,8 @@
 # servernames omitted for obvious reasons
 
 # defined servers
-export admin="";
-export epicprod="";
+export adminserver="";
+export epicprd="";
 export epicrpt="";
 export epicdrp="";
 export epicpoc="";
@@ -12,21 +12,29 @@ export epicmst="";
 export epicjrn="";
 export epicbak="";
 
+# point this at our current prod server
+export epicprod="${epicdrp}"
+
+# our foms folder
+export fomsProd="/epicfiles/prdfiles/release/ras/"
+export fomsNonProd="/epicfiles/prdfiles/release/ras/"
+
 
 # admin server
-alias admin="ssh lchavers@${admin}";
+alias admin="ssh ${adminserver}";
 
 # epic servers
-alias prd="ssh lchavers@${epicprod}";
-alias shd="ssh lchavers@${epicdrp}";
+alias prd="ssh ${epicprd}";
+alias prod="ssh ${epicprod}";
+alias shd="ssh ${epicrpt}";
 alias rpt="shd";
-alias drp="ssh lchavers@${epicrpt}";
-alias poc="ssh lchavers@${epicpoc}";
+alias drp="ssh ${epicdrp}";
+alias poc="ssh ${epicpoc}";
 alias tst="poc";
-alias sup="ssh lchavers@${epicsup}";
-alias mst="ssh lchavers@${epicmst}";
+alias sup="ssh ${epicsup}";
+alias mst="ssh ${epicmst}";
 alias trn="mst";
 
 # epic auxiliary servers
-alias jrn="ssh lchavers@${epicjrn}";
-alias bak="ssh lchavers@${epicbak}";
+alias jrn="ssh ${epicjrn}";
+alias bak="ssh ${epicbak}";

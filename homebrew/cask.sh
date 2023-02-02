@@ -6,7 +6,7 @@
 # brew tap caskroom/versions
 
 # to maintain cask ....
-brew update && brew upgrade && brew cleanup && brew cask cleanup --cask
+brew update && brew upgrade && brew cleanup && brew cleanup --cask
 
 
 # daily
@@ -31,22 +31,23 @@ brew install --cask atom
 brew install --cask sequel-ace            # MySQL GUI. Pure Awesomeness. Updated from PRO to support MySQL 8
 
 brew install --cask virtualbox
-brew install --cask virtualbox-extension-pack
-brew install --cask heroku-toolbelt
+# brew install --cask virtualbox-extension-pack
+# brew install --cask heroku-toolbelt
 brew install --cask vagrant
 brew install --cask github-desktop
-brew install --cask dockertoolbox
+brew install --cask docker-toolbox
 
 # image compression utilities
 brew install --cask imagealpha
 brew install --cask imageoptim
 
-brew install --cask integrity             # Website link checker software
-brew install --cask scrutiny              # Some basic SEO software
+
+# brew install --cask integrity             # Website link checker software
+# brew install --cask scrutiny              # Some basic SEO software
 
 
 # fun
-brew install --cask horndis               # usb tethering
+# brew install --cask horndis               # usb tethering ## Seems that this isn't compatible with OS
 brew install --cask caffeine              # keeps laptop from going into sleep mode
 
 
@@ -63,9 +64,8 @@ brew install --cask brave-browser
 
 # less often
 brew install --cask vlc
-brew install --cask gpgtools
 brew install --cask sdformatter
-brew install --cask unrarx
+# brew install --cask unrarx            # doesn't exist anymore
 brew install --cask insomnia            # I prefer this over postman
 brew install --cask wireshark           # all teh packets are belong to me™
 brew install --cask xld                 # for the occasional file conversion

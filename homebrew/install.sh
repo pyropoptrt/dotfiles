@@ -25,7 +25,7 @@ fi
 brew update
 
 # Upgrade any already-installed formulae.
-brew upgrade --all
+brew upgrade
 
 # Install homebrew packages
 brew install grc coreutils
@@ -41,7 +41,7 @@ brew install moreutils
 # GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
 brew install findutils
 # GNU `sed`, overwriting the built-in `sed`
-brew install gnu-sed --default-names
+brew install gnu-sed
 
 # Bash 4
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
@@ -51,17 +51,20 @@ brew install bash
 brew tap homebrew/versions
 
 # Install wget with IRI support
-brew install wget --enable-iri
+brew install wget
 
 # Install more recent versions of some OS X tools
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep
-brew install homebrew/dupes/screen
+brew install vim
+# brew install homebrew/dupes/grep
+# brew install homebrew/dupes/screen
+brew install grep
+brew install screen
+
+# php stuff
 # brew install homebrew/php/php56 --with-gmp
 
 # # Handy utility for php debugging
 # brew install php56-xdebug
-
 
 
 # run this script when this file changes guy.
@@ -84,7 +87,7 @@ sudo chown root $mtrlocation/sbin/mtr
 brew install ack
 brew install git
 brew install git-lfs
-brew install imagemagick --with-webp
+brew install imagemagick
 brew install lua
 brew install node # This installs `npm` too using the recommended installation method
 brew install lynx
@@ -92,7 +95,7 @@ brew install rbenv
 brew install speedtest_cli
 brew install ssh-copy-id
 brew install tree
-brew install ffmpeg --with-libvpx
+brew install ffmpeg
 brew install terminal-notifier
 brew install zsh
 brew install mysql

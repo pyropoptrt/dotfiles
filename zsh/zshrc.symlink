@@ -1,6 +1,7 @@
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
+
 # your project folder that we can `c [tab]` to
 # export PROJECTS=~/Code
 
@@ -41,8 +42,6 @@ done
 unset config_files
 
 export PATH=~/.composer/vendor/bin:$PATH;
-
-
 
 
 

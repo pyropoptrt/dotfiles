@@ -63,3 +63,20 @@ function sssctl {
 	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
 	cd ${currentPath};
 }
+
+# upload files to our epic servers
+function upload {
+	echo "Uploading our file to production"
+	scp -rpC $@ epicadm@${epicprod}:${fomsProd}
+
+	echo "Uploading our file to our test/non-prod servers"
+
+	# for i in build support training
+	for i in $epicpoc $epicsup $epicmst
+	do
+		scp -rpC $@ epicadm@${i}:${fomsNonProd}
+	done
+
+	echo "Delete our uploaded file"
+	rm -rf $@
+}

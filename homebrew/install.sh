@@ -61,10 +61,16 @@ brew install grep
 brew install screen
 
 # php stuff
+brew install composer
 # brew install homebrew/php/php56 --with-gmp
+brew install php
 
 # # Handy utility for php debugging
 # brew install php56-xdebug
+brew install php-code-sniffer
+brew install phplint
+brew install phpmd
+brew install phpstan
 
 
 # run this script when this file changes guy.

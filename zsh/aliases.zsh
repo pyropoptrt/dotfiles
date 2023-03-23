@@ -60,7 +60,8 @@ function sssctl {
 	currentPath=$(pwd);
 
 	ans; 
-	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
+	# ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
+	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
 	cd ${currentPath};
 }
 

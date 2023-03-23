@@ -12,6 +12,8 @@ if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
   # echo ""
   # echo "Linking Sublime Text for command line usage as subl"
   # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+  # updated for M1 processors
+  # ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /opt/homebrew/bin/subl
 
   echo ""
   echo "Setting Git to use Sublime Text as default editor"

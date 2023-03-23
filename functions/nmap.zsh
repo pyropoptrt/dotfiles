@@ -37,5 +37,5 @@ alias nmservices="nmap -sV --version-intensity 5";
 
 # check port status
 function port {
-	nmap -sC -sV -Pn -p ${1} ${2};
+	nmap -sV -Pn -p ${1} ${2};
 }

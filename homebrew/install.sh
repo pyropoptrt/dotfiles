@@ -33,7 +33,9 @@ brew install grc coreutils
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 #brew install coreutils
-sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+# sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
+# updated bin location for M1 processors
+sudo ln -s /usr/local/bin/gsha256sum /opt/homebrew/bin/sha256sum
 
 # from Paul Irish dot files
 # Install some other useful utilities like `sponge`.

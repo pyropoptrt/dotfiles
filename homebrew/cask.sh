@@ -69,3 +69,4 @@ brew install --cask sdformatter
 brew install --cask insomnia            # I prefer this over postman
 brew install --cask wireshark           # all teh packets are belong to me™
 brew install --cask xld                 # for the occasional file conversion
+brew install --cask soulver             # cool little notepad for doing maths

@@ -46,7 +46,7 @@ function pem {
 }
 
 
-# get our cets
+# get our certs
 function certs {
 	if [[ ${2} ]]; then
 		port=":${2}";

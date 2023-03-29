@@ -39,3 +39,4 @@ alias trn="mst";
 # epic auxiliary servers
 alias jrn="ssh ${epicjrn}";
 alias bak="ssh ${epicbak}";
+alias bck="bak"

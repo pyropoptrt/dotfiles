@@ -13,7 +13,8 @@ export epicjrn="";
 export epicbak="";
 
 # point this at our current prod server
-export epicprod="${epicdrp}"
+export epicprod="${epicprd}"
+#export epicprod="${epicdrp}"
 
 # our foms folder
 export fomsProd="/epicfiles/prdfiles/release/ras/"

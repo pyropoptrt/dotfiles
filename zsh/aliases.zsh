@@ -9,6 +9,9 @@ alias ltr="ls -ltrHp | tail"
 
 alias x="exit"
 
+# preferred flags
+#alias pwd="$(which pwd) -P"
+
 
 # Fix for when quicksilver crashes
 alias quick="killall Quicksilver >> /dev/null; open /Applications/QuickSilver.app"

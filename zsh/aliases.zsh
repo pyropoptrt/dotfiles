@@ -25,6 +25,8 @@ alias st="$(which subl)"
 
 
 # Quick folder navigation
+alias ..="cd .."
+alias ...="cd ../.."
 alias desk="cd ~/Desktop"
 alias down="cd ~/Downloads"
 alias notes="st ~/Dropbox/Unix\ Notes.txt"

@@ -6,7 +6,7 @@ alias ll="ls -lHp --color=auto"
 alias la="ls -lAaHp --color=auto"
 alias ltr="ls -ltrHp | tail"
 
-
+# terminal navigation
 alias x="exit"
 
 # preferred flags

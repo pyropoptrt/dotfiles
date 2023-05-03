@@ -3,7 +3,7 @@
 # ALIASES
 
 # just get header
-alias header="curl -iL -sD - -o /dev/null";
+alias header="curl -iL -k -sD - -o /dev/null";
 
 # shortcut for nslookup
 alias ns="nslookup";

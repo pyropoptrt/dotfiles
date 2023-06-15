@@ -86,3 +86,9 @@ function upload {
 	echo "Delete our uploaded file"
 	rm -rf $@
 }
+
+function newserver {
+	ans;
+	$(which cp) server-build-template.yaml ${1}-build.yaml;
+	$(which st) ${1}-build.yaml;
+}

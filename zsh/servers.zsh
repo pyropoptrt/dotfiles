@@ -18,7 +18,7 @@ export epicprod="${epicprd}"
 
 # our foms folder
 export fomsProd="/epicfiles/prdfiles/release/ras/"
-export fomsNonProd="/epicfiles/prdfiles/release/ras/"
+export fomsNonProd="/epicfiles/nonprdfiles/release/ras/"
 
 
 # admin server

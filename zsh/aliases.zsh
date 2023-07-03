@@ -92,3 +92,9 @@ function newserver {
 	$(which cp) server-build-template.yaml ${1}-build.yaml;
 	$(which st) ${1}-build.yaml;
 }
+
+# Convert our timestamps from epoch to normal
+# $ epoch 1688421231
+function epoch {
+	date -r $@;
+}

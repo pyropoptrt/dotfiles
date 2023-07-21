@@ -27,6 +27,9 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+# ZSH syntax highlighting
+brew install zsh-syntax-highlighting
+
 # Install homebrew packages
 brew install grc coreutils
 

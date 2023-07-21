@@ -57,7 +57,7 @@ function egroups {
 
 	ans; 
 	ansible epic-linux -K -m shell -a "groups ${1}"; 
-	cd ${currentPath};
+	cd "${currentPath}";
 }
 
 # retrieve the gecos for a user
@@ -67,7 +67,7 @@ function sssctl {
 	ans; 
 	# ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
 	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
-	cd ${currentPath};
+	cd "${currentPath}";
 }
 
 # upload files to our epic servers

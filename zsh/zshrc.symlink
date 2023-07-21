@@ -49,6 +49,10 @@ export PATH=~/.composer/vendor/bin:$PATH;
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
+# load our zsh syntax highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
 # launch sublime
 # echo 'export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"'
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"

@@ -3,7 +3,7 @@
 # ALIASES
 
 # SSL Labs report card for cert
-alias nmap_ssl="$(which nmap) -sV -sC --script ssl-cert"
+alias nmap_ssl="nmap -sV -sC --script ssl-cert"
 
 
 

@@ -6,6 +6,9 @@ alias ll="ls -lHp --color=auto"
 alias la="ls -lAaHp --color=auto"
 alias ltr="ls -ltrHp | tail"
 
+# file manipulation
+alias copy="cp -pr"
+
 # terminal navigation
 alias x="exit"
 

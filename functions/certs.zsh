@@ -49,36 +49,36 @@ function pem {
 # get our certs
 function certs {
 	if [[ ${2} ]]; then
-		port=":${2}";
+		port="${2}";
 	else
-		port=":443";
+		port="443";
 	fi
 
-	openssl s_client -showcerts -connect ${1}${port} -servername ${1};
+	openssl s_client -showcerts -connect ${1}:${port} -servername ${1};
 }
 
 
 # full debug output
 function certs_debug {	
 	if [[ ${2} ]]; then
-		port=":${2}";
+		port="${2}";
 	else
-		port=":443";
+		port="443";
 	fi
 
-	openssl s_client -debug -connect $${1}${port} -prexit;
+	openssl s_client -debug -connect ${1}:${port} -prexit;
 }
 
 
 function certs_check {
 
  	if [[ ${2} ]]; then
-		port=":${2}";
+		port="${2}";
 	else
-		port=":443";
+		port="443";
 	fi
 
-	openssl s_client -connect $${1}${port} -prexit;
+	openssl s_client -connect ${1}:${port} -prexit;
 }
 
 
@@ -86,12 +86,12 @@ function certs_check {
 function certs_expiry {
 
 	if [[ ${2} ]]; then
-		port=":${2}";
+		port="${2}";
 	else
-		port=":443";
+		port="443";
 	fi
 
-	echo | openssl s_client -servername ${1} -connect ${1}${port} 2>/dev/null | openssl x509 -noout -issuer -subject -dates;
+	echo | openssl s_client -servername ${1} -connect ${1}:${port} 2>/dev/null | openssl x509 -noout -issuer -subject -dates;
 }
 
 

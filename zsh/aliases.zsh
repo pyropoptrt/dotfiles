@@ -27,7 +27,8 @@ alias coreaudio="sudo pkill coreaudiod; sudo killall 'AU Lab' >> /dev/null;"
 
 
 # Shortcut for Sublime Text
-alias st="$(which subl)"
+# alias st="$(which subl)"
+alias st="subl"
 
 
 # Quick folder navigation

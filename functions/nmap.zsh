@@ -45,3 +45,9 @@ function port {
 function nmap_http {
     nmap --script http-headers --script-args path="${2}",useget "${1}"
 }
+
+# wrapper for checking http headers via nmap
+# $ nmap_http url path
+function nmap_http {
+    nmap --script http-headers --script-args path="${2}",useget "${1}"
+}

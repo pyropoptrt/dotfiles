@@ -37,13 +37,7 @@ alias nmservices="nmap -sV --version-intensity 5";
 
 # check port status
 function port {
-	nmap -sV -Pn -p ${1} ${2};
-}
-
-# wrapper for checking http headers via nmap
-# $ nmap_http url path
-function nmap_http {
-    nmap --script http-headers --script-args path="${2}",useget "${1}"
+    nmap -sV -Pn -p ${1} ${2};
 }
 
 # wrapper for checking http headers via nmap

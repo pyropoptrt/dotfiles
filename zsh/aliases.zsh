@@ -57,48 +57,50 @@ alias powershell="pwsh"
 #   Epic
 # queries Epic servers for user groups
 function egroups {
-	currentPath=$(pwd);
+    currentPath=$(pwd);
 
-	ans; 
-	ansible epic-linux -K -m shell -a "groups ${1}"; 
-	cd "${currentPath}";
+    ans; 
+    ansible epic-linux -K -m shell -a "groups ${1}"; 
+    cd "${currentPath}";
 }
 
 # retrieve the gecos for a user
 function sssctl {
-	currentPath=$(pwd);
+    currentPath=$(pwd);
 
-	ans; 
-	# ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
-	ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
-	cd "${currentPath}";
+    ans; 
+    # ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
+    ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
+    cd "${currentPath}";
 }
 
 # upload files to our epic servers
 function upload {
-	echo "Uploading our file to production"
-	scp -rpC $@ epicadm@${epicprod}:${fomsProd}
+    echo "Uploading our file to production"
+    scp -rpC $@ epicadm@${epicprod}:${fomsProd}
 
-	echo "Uploading our file to our test/non-prod servers"
+    echo "Uploading our file to our test/non-prod servers"
 
-	# for i in build support training
-	for i in $epicpoc $epicsup $epicmst
-	do
-		scp -rpC $@ epicadm@${i}:${fomsNonProd}
-	done
+    # for i in build support training
+    for i in $epicpoc $epicsup $epicmst
+    do
+        scp -rpC $@ epicadm@${i}:${fomsNonProd}
+    done
 
-	echo "Delete our uploaded file"
-	rm -rf $@
+    echo "Delete our uploaded file"
+    rm -rf $@
+}
+
 }
 
 function newserver {
-	ans;
-	$(which cp) server-build-template.yaml ${1}-build.yaml;
-	$(which st) ${1}-build.yaml;
+    ans;
+    $(which cp) server-build-template.yaml ${1}-build.yaml;
+    $(which st) ${1}-build.yaml;
 }
 
 # Convert our timestamps from epoch to normal
 # $ epoch 1688421231
 function epoch {
-	date -r $@;
+    date -r $@;
 }

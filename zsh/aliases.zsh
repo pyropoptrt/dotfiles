@@ -97,7 +97,7 @@ function upload {
 function newserver {
     ans;
     $(which cp) server-build-template.yaml ${1}-build.yaml;
-    $(which st) ${1}-build.yaml;
+    st ${1}-build.yaml;
 }
 
 # Convert our timestamps from epoch to normal

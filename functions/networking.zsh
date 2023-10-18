@@ -5,11 +5,33 @@
 # just get header
 alias header="curl -iL -k -sD - -o /dev/null";
 
-# shortcut for nslookup
-alias ns="nslookup";
+# # shortcut for nslookup
+# alias ns="nslookup";
 
 
 # FUNCTIONS
+
+# perform a hostname lookup and make sure our input is lowercased
+function ns {
+
+    # make sure we were provided an input
+    if [ -z "$@" ]; then
+        echo "Missing hostname \n";
+        echo "Usage : ns <hostname> \n";
+        return 1;
+    fi
+
+    # convert our input to lowercase
+    # host=$(awk "{ print tolower($@) }");
+    host=$(echo "$@" | tr 'A-Z' 'a-z');
+
+    # # debug our host output
+    # echo "${host}";
+
+    # run our nslookup
+    nslookup "${host}";
+}
+
 
 # Get the geo location for an ip address
 function geoip {

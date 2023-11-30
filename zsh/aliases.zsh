@@ -105,3 +105,8 @@ function newserver {
 function epoch {
     date -r $@;
 }
+
+# create a new ${1}.html file
+function html {
+    cp ~/.dotfiles/html/html5-boilerplate.html "${1}.html";
+}

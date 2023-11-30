@@ -27,7 +27,7 @@ function pem {
 	openssl pkcs7 -inform PEM -in ${oldfile} -outform PEM -out ${newfile} -print_certs
 
 	# convert our file from pem to crt
-	openssl x509 -inform PEM -in ${newfile}	-out ${crtfile}
+	openssl x509 -inform PEM -in ${newfile} -out ${crtfile}
 
 	# delete our old cert file
 	rm -rf ${oldfile}

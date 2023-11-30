@@ -91,7 +91,7 @@ function certs_expiry {
 		port="443";
 	fi
 
-	echo | openssl s_client -servername ${1} -connect ${1}:${port} 2>/dev/null | openssl x509 -noout -issuer -subject -dates;
+	echo | openssl s_client -servername ${1} -connect ${1}:${port} 2>/dev/null | openssl x509 -noout -issuer -subject -dates -ext subjectAltName;
 }
 
 

@@ -14,7 +14,7 @@ alias nf="nmap_fast";
 alias nff="nmap_full";
 
 # use nmap to get a MAC address
-alias nmap_mac="sudo nmap -sP -Pn";
+alias nmap_mac="sudo nmap -sP -n";
 
 # check our ssl ciphers
 alias nmap_ssl_check="nmap -sV --script ssl-enum-ciphers -p 443";

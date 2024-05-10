@@ -66,9 +66,9 @@ brew install grep
 brew install screen
 
 # php stuff
+brew install php
 brew install composer
 # brew install homebrew/php/php56 --with-gmp
-brew install php
 
 # # Handy utility for php debugging
 # brew install php56-xdebug
@@ -99,7 +99,7 @@ brew install ack
 brew install git
 brew install git-lfs
 brew install imagemagick
-brew install lua
+brew install lua luarocks
 brew install node # This installs `npm` too using the recommended installation method
 brew install lynx
 brew install rbenv
@@ -118,6 +118,10 @@ brew install ansible # Been using this and SaltStack hand-in-hand
 # lint all the shell scripts™!
 brew install shellcheck
 pip install bashate
+
+# troubleshooting ssl stuff
+brew install sslyze
+brew install sslscan
 
 
 # install dnsmasq and do some set up to allow .dev domains locally

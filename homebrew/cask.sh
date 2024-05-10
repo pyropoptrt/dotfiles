@@ -14,7 +14,9 @@ brew install --cask iris                  # saves your eyes. Seriously.
 brew install --cask spectacle             # handy utility for moving/resizing windows
 brew install --cask dropbox
 brew install --cask lastpass			  # passwords and such
-brew install --cask soundflower           # for capturing audio output
+# brew install --cask soundflower           # for capturing audio output
+brew install --cask blackhole-2ch           # for capturing audio output
+brew install --cask blackhole-16ch           # for capturing audio output
 brew install --cask au-lab                # I use this for global eq
 brew install --cask spotify				  # gotta have my tunes
 brew install --cask transmit			  # awesome sftp client
@@ -22,12 +24,11 @@ brew install --cask quicksilver           # Quicksilver > Alfred (imho)
 brew install --cask iterm2                # much better than Apple's terminal
 brew install --cask slack
 brew install --cask discord               # all the cool kids are on this nowadays 
-brew install --cask tweeten               # nice replacement for tweetdeck. RIP.
+# brew install --cask tweeten               # nice replacement for tweetdeck. RIP.
 
 
 # dev
 brew install --cask sublime-text          # my editor of choice
-brew install --cask atom
 brew install --cask sequel-ace            # MySQL GUI. Pure Awesomeness. Updated from PRO to support MySQL 8
 
 brew install --cask virtualbox

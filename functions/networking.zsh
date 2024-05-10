@@ -78,4 +78,5 @@ function timing {
     }';
 
     curl -w "${curl_format}" -o /dev/null -s $@;
+    # curl -w "${curl_format}" -o /dev/null -s "${1}";
 }

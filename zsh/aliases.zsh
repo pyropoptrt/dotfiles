@@ -50,6 +50,7 @@ alias ap="ans; ansible-playbook -K"
 alias dist="ans; ap ubuntu-dist-upgrade.yaml"
 alias distu="ans; ap -u unixadmin ubuntu-dist-upgrade.yaml"
 alias yum="ans; ap centos-ossec_aide-update.yaml"
+alias al="$(which ansible-lint)"
 
 
 # powershell

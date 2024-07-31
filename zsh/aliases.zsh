@@ -73,7 +73,8 @@ function sssctl {
 
     ans; 
     # ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 \"gecos: (\w.+)\""; 
-    ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
+    # ansible epic-prod -K -m shell -a  "sssctl user-checks ${1} | ack -1 --color \"\- gecos: (\w.+)\""; 
+    ansible epic-prod -K -m shell -a  "getent passwd  ${1} | awk -F \":\" '{print \$5}'"; 
     cd "${currentPath}";
 }
 

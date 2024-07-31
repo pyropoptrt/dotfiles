@@ -59,9 +59,11 @@ alias powershell="pwsh"
 # queries Epic servers for user groups
 function egroups {
     currentPath=$(pwd);
+    un=$(echo ${1} | awk '{ print tolower($0) }');
 
     ans; 
-    ansible epic-linux -K -m shell -a "groups ${1}"; 
+    # ansible epic-linux -K -m shell -a "groups ${1}"; 
+    ansible epic-linux -K -m shell -a "groups ${un}"; 
     cd "${currentPath}";
 }
 

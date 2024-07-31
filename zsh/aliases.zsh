@@ -47,6 +47,7 @@ alias dnsmasq="vim ~/.config/valet/dnsmasq.d/tld-test.conf && sudo brew services
 #   Ansible
 alias ans="cd ~/Documents/ansible"
 alias ap="ans; ansible-playbook -K"
+alias apu="ap -u unixadmin"
 alias dist="ans; ap ubuntu-dist-upgrade.yaml"
 alias distu="ans; ap -u unixadmin ubuntu-dist-upgrade.yaml"
 alias yum="ans; ap centos-ossec_aide-update.yaml"

@@ -20,7 +20,8 @@ brew install --cask blackhole-16ch           # for capturing audio output
 brew install --cask au-lab                # I use this for global eq
 brew install --cask spotify				  # gotta have my tunes
 brew install --cask transmit			  # awesome sftp client
-brew install --cask quicksilver           # Quicksilver > Alfred (imho)
+# brew install --cask quicksilver           # Quicksilver > Alfred (imho)
+brew install --cask raycast           # Testing this as a replacement for quicksilver
 brew install --cask iterm2                # much better than Apple's terminal
 brew install --cask slack
 brew install --cask discord               # all the cool kids are on this nowadays 

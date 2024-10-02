@@ -77,6 +77,7 @@ function timing {
      "time_total": %{time_total}
     }';
 
-    curl -w "${curl_format}" -o /dev/null -s $@;
+    # curl -w "${curl_format}" -o /dev/null -s "$@";
+    curl -w "@curl-format.txt" -o /dev/null -s "$@";
     # curl -w "${curl_format}" -o /dev/null -s "${1}";
 }

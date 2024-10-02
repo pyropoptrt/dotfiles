@@ -98,6 +98,7 @@ sudo chown root $mtrlocation/sbin/mtr
 brew install ack
 brew install git
 brew install git-lfs
+brew install httpie
 brew install imagemagick
 brew install lua luarocks
 brew install node # This installs `npm` too using the recommended installation method

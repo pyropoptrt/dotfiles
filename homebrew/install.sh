@@ -113,7 +113,7 @@ brew install mysql
 brew install nmap
 brew install mackup
 brew install sshuttle # neat little utility for vpn via ssh
-brew install ansible # Been using this and SaltStack hand-in-hand
+brew install ansible@9 # Been using this and SaltStack hand-in-hand
 
 # lint all the shell scripts™!
 brew install shellcheck

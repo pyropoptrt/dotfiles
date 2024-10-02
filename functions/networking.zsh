@@ -50,7 +50,7 @@ function response {
         "total time": %{time_total}
     }';
 
-    curl -o /dev/null -w "${curl_format}" -s $@;
+    curl -o /dev/null -w "${curl_format}" -s "$@";
 }
 
 # Get overall timing

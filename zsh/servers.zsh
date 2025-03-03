@@ -11,6 +11,8 @@ export epicsup="";
 export epicmst="";
 export epicjrn="";
 export epicbak="";
+export INFOBLOX="";
+export IBPASSWD='';
 
 # point this at our current prod server
 export epicprod="${epicprd}"

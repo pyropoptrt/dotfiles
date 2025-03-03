@@ -39,6 +39,10 @@ function geoip {
     curl http://api.db-ip.com/v2/free/$@;
 }
 
+function getSubnet {
+    $(which http) -j --print b -a lchavers:"${IBPASSWD}" https://"${INFOBLOX}"/wapi/v2.12.3/ipv4address\?ip_address="$@" | $(which jq) '.[].network';
+}
+
 # timing script for connection, start transfer, and total time
 function response {
     # echo "connect | start | total";

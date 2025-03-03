@@ -65,7 +65,7 @@ function egroups {
 
     ans; 
     # ansible epic-linux -K -m shell -a "groups ${1}"; 
-    ansible epic-linux -K -m shell -a "groups ${un}"; 
+    ansible epic_linux -K -m shell -a "groups ${un}"; 
     cd "${currentPath}";
 }
 

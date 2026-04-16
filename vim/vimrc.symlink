@@ -43,3 +43,15 @@ set statusline+=%=]
 au BufNewFile,BufRead *.yaml,*.yml so ~/.dotfiles/vim/syntax/yaml.vim
 autocmd BufNewFile,BufRead /etc/php/*/fpm/*.conf set syntax=dosini
 autocmd BufNewFile,BufRead /etc/php/*/fpm/pool.d/*.conf set syntax=dosini
+
+
+" Vim Plugin section
+" https://github.com/junegunn/vim-plug?tab=readme-ov-file
+call plug#begin()
+
+" phpactor vim plugin
+Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+
+" end Vim Plugin section
+call plug#end()
+

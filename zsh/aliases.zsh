@@ -61,7 +61,7 @@ alias powershell="pwsh"
 # queries Epic servers for user groups
 function egroups {
     currentPath=$(pwd);
-    un=$(echo ${1} | awk '{ print tolower($0) }');
+    un=$(echo "${1}" | awk '{ print tolower($0) }');
 
     ans; 
     # ansible epic-linux -K -m shell -a "groups ${1}"; 
@@ -83,32 +83,32 @@ function sssctl {
 # upload files to our epic servers
 function upload {
     echo "Uploading our file to production"
-    scp -rpC $@ epicadm@${epicprod}:${fomsProd}
+    scp -rpC "$@" epicadm@"${epicprod}":"${fomsProd}"
 
     echo "Uploading our file to our test/non-prod servers"
 
     # for i in build support training
     for i in $epicpoc $epicsup $epicmst
     do
-        scp -rpC $@ epicadm@${i}:${fomsNonProd}
+       scp -rpC "$@" epicadm@${i}:"${fomsNonProd}"
     done
 
     echo "Delete our uploaded file"
-    rm -rf $@
+    rm -rf "$@"
 }
 
 }
 
 function newserver {
     ans;
-    $(which cp) server-build-template.yaml ${1}-build.yaml;
-    st ${1}-build.yaml;
+    $(which cp) server-build-template.yaml "${1}"-build.yaml;
+    st "${1}"-build.yaml;
 }
 
 # Convert our timestamps from epoch to normal
 # $ epoch 1688421231
 function epoch {
-    date -r $@;
+    date -r "${@}";
 }
 
 # create a new ${1}.html file

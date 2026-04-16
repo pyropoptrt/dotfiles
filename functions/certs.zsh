@@ -29,16 +29,16 @@ function pem {
 	# convert our file from pem to crt
 	openssl x509 -inform PEM -in ${newfile} -out ${crtfile}
 
-	# delete our old cert file
-	rm -rf ${oldfile}
+	## delete our old cert file
+	#rm -rf ${oldfile}
 
 	# upload our new cert files
 	scp -rpC ${newfile} ${servername}:~
 	scp -rpC ${crtfile} ${servername}:~
 
-	# Delete our newly created cert
-	rm -rf ${newfile}
-	rm -rf ${crtfile}
+	## Delete our newly created cert
+	#rm -rf ${newfile}
+	#rm -rf ${crtfile}
 
 	# echo created new cert and uploaded
 	# echo "Created ${newfile} and uploaded to ${servername}"

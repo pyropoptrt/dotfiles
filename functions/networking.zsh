@@ -85,3 +85,9 @@ function timing {
     curl -w "@curl-format.txt" -o /dev/null -s "$@";
     # curl -w "${curl_format}" -o /dev/null -s "${1}";
 }
+
+# Get the final url from a redirect
+function finalurl {
+    REDIRECT=$(curl -L -s -o /dev/null -w '%{url_effective}\n' -G / --data-urlencode "param=$@");
+    echo "Final URL : ${REDIRECT}";
+}

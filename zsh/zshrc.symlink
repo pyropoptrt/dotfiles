@@ -32,7 +32,12 @@ done
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
-compinit
+# Only rebuild completion dump once per day
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -61,9 +66,30 @@ export PATH="/opt/homebrew/opt/ansible@9/bin:$PATH"
 
 # Herd injected NVM configuration
 export NVM_DIR="/Users/lchavers/Library/Application Support/Herd/config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh"
+# Lazy-load NVM — only loads when nvm/node/npm/npx is first used
+nvm() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm "$@"
+}
+node() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  node "$@"
+}
+npm() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npm "$@"
+}
+npx() {
+  unset -f nvm node npm npx
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  npx "$@"
+}
+
+[[ -f "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" ]] && builtin source "/Applications/Herd.app/Contents/Resources/config/shell/zshrc.zsh" 2>/dev/null
 
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/lchavers/Library/Application Support/Herd/config/php/83/"

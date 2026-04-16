@@ -21,7 +21,7 @@ then
 
 fi
 
-# Make sure we’re using the latest Homebrew.
+# Make sure we're using the latest Homebrew.
 brew update
 
 # Upgrade any already-installed formulae.
@@ -34,7 +34,7 @@ brew install zsh-syntax-highlighting
 brew install grc coreutils
 
 # Install GNU core utilities (those that come with OS X are outdated).
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+# Don't forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 #brew install coreutils
 # sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 # updated bin location for M1 processors
@@ -49,32 +49,21 @@ brew install findutils
 brew install gnu-sed
 
 # Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
+# Note: don't forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
 brew install bash
-# regular bash-completion package is held back to an older release, so we get latest from versions.
-#   github.com/Homebrew/homebrew/blob/master/Library/Formula/bash-completion.rb#L3-L4
-brew tap homebrew/versions
 
 # Install wget with IRI support
 brew install wget
 
 # Install more recent versions of some OS X tools
 brew install vim
-# brew install homebrew/dupes/grep
-# brew install homebrew/dupes/screen
 brew install grep
 brew install screen
 
 # php stuff
 brew install php
 brew install composer
-# brew install homebrew/php/php56 --with-gmp
-
-# # Handy utility for php debugging
-# brew install php56-xdebug
 brew install php-code-sniffer
-brew install phplint
-brew install phpmd
 brew install phpstan
 
 
@@ -84,12 +73,15 @@ brew install entr
 # github util. imho better than hub
 brew install gh
 
+# gitlab util
+brew install glab
+
 
 # mtr - ping & traceroute. best.
 brew install mtr
 
 # allow mtr to run without sudo
-mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//') #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
+mtrlocation=$(brew info mtr | grep Cellar | sed -e 's/ (.*//')  #  e.g. `/Users/paulirish/.homebrew/Cellar/mtr/0.86`
 sudo chmod 4755 $mtrlocation/sbin/mtr
 sudo chown root $mtrlocation/sbin/mtr
 
@@ -104,7 +96,9 @@ brew install lua luarocks
 brew install node # This installs `npm` too using the recommended installation method
 brew install lynx
 brew install rbenv
-brew install speedtest_cli
+brew install ruby
+brew install ruby-build
+brew install rust
 brew install ssh-copy-id
 brew install tree
 brew install ffmpeg
@@ -112,18 +106,16 @@ brew install terminal-notifier
 brew install zsh
 brew install mysql
 brew install nmap
-brew install mackup
 brew install sshuttle # neat little utility for vpn via ssh
-brew install ansible@9 # Been using this and SaltStack hand-in-hand
+brew install ansible  # Been using this and SaltStack hand-in-hand
+brew install ansible-lint
 
 # lint all the shell scripts™!
 brew install shellcheck
-pip install bashate
+brew install shfmt
 
 # troubleshooting ssl stuff
-brew install sslyze
 brew install sslscan
-
 
 # install dnsmasq and do some set up to allow .dev domains locally
 brew install dnsmasq
@@ -138,10 +130,29 @@ brew install dnsmasq
 # some stuff for playing blu-rays with vlc
 brew install libbluray
 brew install libaacs
- 
+
 # handy utils for output formatting
-brew instal jq # json formatting
-brew instal htmlq # html formatting
+brew install jq       # json formatting
+brew install htmlq    # html formatting
+
+# handy CLI tools
+brew install cloudflared    # Cloudflare tunnel
+brew install csvkit         # CSV swiss army knife
+brew install deno           # JavaScript/TypeScript runtime
+brew install dos2unix       # line ending conversion
+brew install htop           # interactive process viewer
+brew install mailpit        # local email testing
+brew install neovim         # modern vim
+brew install opencode       # AI coding agent
+brew install opentofu       # Terraform open source fork
+brew install p7zip          # 7-zip compression
+brew install ripgrep        # fast grep
+brew install sherlock        # username search tool
+brew install tldr           # simplified man pages
+brew install tmux           # terminal multiplexer
+brew install uv             # fast Python package manager
+brew install watch          # run commands periodically
+brew install yt-dlp         # video downloader
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -40,7 +40,41 @@ function geoip {
 }
 
 function getSubnet {
-    $(which http) -j --print b -a lchavers:"${IBPASSWD}" https://"${INFOBLOX}"/wapi/v2.12.3/ipv4address\?ip_address="$@" | $(which jq) '.[].network';
+    local ip="$@"
+    local base_url="https://${INFOBLOX}/wapi/v2.12.3"
+    local http_cmd
+    http_cmd=$(which http)
+    local jq_cmd
+    jq_cmd=$(which jq)
+    # printf "IP: %s\nBase URL: %s" "$ip" "$base_url"
+
+    # # the og call
+    # # $(which http) -j --print b -a lchavers:"${IBPASSWD}" https://"${INFOBLOX}"/wapi/v2.12.3/ipv4address\?ip_address="$@" | $(which jq) '.[].network';
+
+    local raw1
+    raw1=$(${http_cmd} -j --print b \
+        --auth "lchavers:${IBPASSWD}" \
+        "${base_url}/ipv4address?ip_address=${ip}")
+    # echo "${raw1}" >&2
+
+    local subnet
+    subnet=$(echo "$raw1" | ${jq_cmd} -r '.[].network')
+    # echo "${subnet}" >&2
+
+    if [[ -z "$subnet" ]]; then
+        echo "ERROR: no subnet found for IP ${ip}" >&2
+        return 1
+    fi
+
+    local subnet_encoded="${subnet/\//%2F}"
+
+    local comment
+    comment=$(${http_cmd} -j --print b \
+        --auth "lchavers:${IBPASSWD}" \
+        "${base_url}/network?network=${subnet_encoded}&_return_fields=network,comment" \
+        | ${jq_cmd} -r '.[0].comment // "no comment"')
+
+    printf "Network: %s\nNetwork Name: %s\n" "$subnet" "$comment"
 }
 
 # timing script for connection, start transfer, and total time

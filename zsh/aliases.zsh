@@ -116,3 +116,8 @@ function epoch {
 function html {
     cp ~/.dotfiles/html/html5-boilerplate.html "${1}.html";
 }
+# this function will create an iso from a folder
+function makeiso {
+    hdiutil makehybrid -iso -joilet -o "$@".iso "$@"
+}
+

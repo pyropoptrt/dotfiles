@@ -43,6 +43,7 @@ brew install --cask utm                   # VM manager (Apple Silicon)
 brew install --cask dbngin               # local database manager
 brew install --cask tableplus            # MySQL/Postgres GUI
 brew install --cask bruno                # API client
+brew install bruno-cli                   # Command line version of bruno (API client)
 brew install --cask insomnia             # API client (alt)
 brew install --cask miniconda            # Python environment management
 brew install --cask lm-studio            # local LLM runner
